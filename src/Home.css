@@ -1,1 +1,15 @@
-/* No CSS *//*# sourceMappingURL=Home.css.map */
+div {
+  font-weight: normal;
+  color: white;
+}
+
+h2 {
+  font-weight: normal;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  margin: 5%;
+}
+/*# sourceMappingURL=Home.css.map */

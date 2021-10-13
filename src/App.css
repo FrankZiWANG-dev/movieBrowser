@@ -1,3 +1,8 @@
-a {
-    margin: 5%;
+.font-loader {
+  font-family: 'Lato';
 }
+
+div {
+  background-color: #15141F;
+}
+/*# sourceMappingURL=App.css.map */

@@ -7,8 +7,25 @@ export default function Home() {
     return (
         <>
         <Nav/>
-        
-        <p>Home</p>
+        <div id="spotlight">
+            <div id="spotlight-label">
+                Movie Spotlight
+            </div>
+        </div>
+        <div id="trending">
+            <h2> Trending </h2>
+            <div id="carrousel">
+                <div id='carrousel-images'>
+                    <div id='imdb-rating'>
+                        IMDb rating
+                    </div>
+                    Carrousel images
+                    <div id='carrousel-film-title'>
+                        Film title
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <Footer/>
         </>
