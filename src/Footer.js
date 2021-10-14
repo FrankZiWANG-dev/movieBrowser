@@ -5,9 +5,9 @@ import './Footer.css';
 export default function Footer(){
     return (
         <footer>
-            <Link to="/">Home</Link>
-            <Link to="/Discover">Discover</Link>
-            <Link to="/Profile">Profile</Link>
+            <Link to="/" style={{textDecoration: 'none', color:'white'}}>Home</Link>
+            <Link to="/Discover" style={{textDecoration: 'none', color:'white'}}>Discover</Link>
+            <Link to="/Profile" style={{textDecoration: 'none', color:'white'}}>Profile</Link>
         </footer>
     );
 }

@@ -8,8 +8,18 @@ export default function Discover() {
         <>
         <Nav/>
 
-        <p>Discover</p>
+        <div id='search-box'>
+            <input id='search'></input>
+        </div>
         
+        <div id='categories'>
+            Fantasy
+        </div>
+        
+        <div id='movies'>
+            Movies
+        </div>
+
         <Footer/>
 
         </>

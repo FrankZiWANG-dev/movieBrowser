@@ -1,0 +1,16 @@
+#film-box {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+  max-height: 300px;
+  border-radius: 40px;
+}
+
+#film-image {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 40px;
+}
+/*# sourceMappingURL=Trending.css.map */
