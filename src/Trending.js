@@ -13,33 +13,47 @@ export default class Trending extends React.Component{
         const response = await fetch(url);
         const data = await response.json();
         
-        this.setState({person: data.results[0], loading: false, poster: 'https://image.tmdb.org/t/p/original/' + data.results[0].poster_path});
+        this.setState({
+            movies: data.results,
+            loading: false, 
+            poster: 'https://image.tmdb.org/t/p/original/' + data.results[0].poster_path
+        });
     }
 
     render() {
+        if (this.state.loading){
+            return (
+                <div id="trending">
+                    <h2> Trending </h2>
+                    <div id="carrousel">
+                        Loading...
+                    </div>
+                </div>
+            )
+        }
+        if (!this.state.movies){
+            return (
+                <div id="trending">
+                    <h2> Trending </h2>
+                    <div id="carrousel">
+                        Movie not found
+                    </div>
+                </div>
+            )
+        }
         return (
-        <div id="trending">
-            <h2> Trending </h2>
-            <div id="carrousel">
-                {this.state.loading || !this.state.person ? 
-                    <div> loading... </div> 
-                : 
-                    <div id='film-box'>
-                        <img id='film-image' src={this.state.poster}/>
-                        <div>{this.state.person.original_title}</div>
-                    </div>
-                }
-                {/* <div id='carrousel-images'>
-                    <div id='imdb-rating'>
-                        IMDb rating
-                    </div>
-                    Carrousel images
-                    <div id='carrousel-film-title'>
-                        Film title
-                    </div>
-                </div> */}
+            <div id="trending">
+                <h2> Trending </h2>
+                <div id="carrousel">
+                        {this.state.movies.map(movie => (
+                        <div class='film-box'>
+                            <img class='film-image' src={this.state.poster}/>
+                            <p>{movie.original_title}</p>
+                        </div>
+                        ))}
+                    
+                </div>
             </div>
-        </div>
-        );
-    };
+        )
+    };        
 };

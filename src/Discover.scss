@@ -1,0 +1,20 @@
+#search-box {
+    background-color: #211F30;
+    width: 80%;
+    margin: 5% auto 5% auto ;
+    border-radius: 10px;
+    padding-left: 5%;
+}
+input{
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 2% 2% 2% 10%;
+}
+input:focus{
+    outline: none;
+}
+#search-icon{
+    position:absolute;
+    margin: 2%;
+}
