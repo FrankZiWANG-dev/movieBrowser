@@ -2,7 +2,7 @@ import React from 'react';
 import './Trending.css';
 
 export default class Trending extends React.Component{
-
+//fix carousel size images and remove movie from spotlight in it
     state = {
         loading: true,
         person: null,
@@ -31,8 +31,6 @@ export default class Trending extends React.Component{
         const movies = titles.map(function(x, i){
             return {title: x, poster: posters[i], vote: votes[i]};
         })
-
-        console.log(movies);
         
         this.setState({
             movies : movies,

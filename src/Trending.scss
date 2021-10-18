@@ -1,9 +1,13 @@
 #carrousel {
     margin: 0px;
     padding: 0px;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    white-space: nowrap;
 }
 .film-box {
-    margin: 0% auto 8% auto;
+    margin: 0% 5% 8% 5%;
     max-width: 200px;
     max-height: 300px;
     border-radius: 40px;
