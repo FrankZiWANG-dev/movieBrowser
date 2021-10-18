@@ -68,7 +68,11 @@ export default class Trending extends React.Component{
                         {this.state.movies.map(movie => (
                         <div class='film-box'>
                             
-                            <div class='film-vote'><span class='imdb'>IMDb</span><br/>{movie.vote}</div>
+                            <div class='film-vote'>
+                                <span class='imdb'>IMDb</span><br/>
+                                <img class='star' alt='star' src='https://github.com/FrankZiWANG-dev/movieBrowser/blob/main/src/images/Group%20262.png?raw=true' />
+                                {movie.vote}
+                            </div>
                            
                             <img class='film-image' alt='movie-poster' src={movie.poster}/>
                             
