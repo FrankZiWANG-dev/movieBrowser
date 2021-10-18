@@ -22,7 +22,7 @@ export default function Footer(){
         <footer>
             <Link to="/"><img alt="home-button" src="https://github.com/FrankZiWANG-dev/movieBrowser/blob/main/src/images/home-button.png?raw=true"/></Link>
             <Link to="/Discover" ><img alt='discover-button' src='https://github.com/FrankZiWANG-dev/movieBrowser/blob/main/src/images/discover-button.png?raw=true'/></Link>
-            <Link to="/Profile" ><span style='color: orange'><FontAwesomeIcon icon={faUser} id='user-icon'/></span></Link>
+            <Link to="/Profile" ><FontAwesomeIcon icon={faUser} id='user-icon'/></Link>
         </footer>
     )}
     
