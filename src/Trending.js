@@ -12,11 +12,31 @@ export default class Trending extends React.Component{
         const url = 'https://api.themoviedb.org/3/trending/movie/day?api_key=26f07839b664a690dcfc2af24210b786';
         const response = await fetch(url);
         const data = await response.json();
+
+        const titles = []; 
+        for (let x=0; x<10; x++) {
+            titles.push(data.results[x].original_title);
+        }
+        
+        const posters = []; 
+        for (let x=0; x<10; x++) {
+            posters.push('https://image.tmdb.org/t/p/original/' + data.results[x].poster_path);
+        }
+
+        const votes = []; 
+        for (let x=0; x<10; x++) {
+            votes.push(data.results[x].vote_average);
+        }
+
+        const movies = titles.map(function(x, i){
+            return {title: x, poster: posters[i], vote: votes[i]};
+        })
+
+        console.log(movies);
         
         this.setState({
-            movies: data.results,
+            movies : movies,
             loading: false, 
-            poster: 'https://image.tmdb.org/t/p/original/' + data.results[0].poster_path
         });
     }
 
@@ -47,8 +67,13 @@ export default class Trending extends React.Component{
                 <div id="carrousel">
                         {this.state.movies.map(movie => (
                         <div class='film-box'>
-                            <img class='film-image' src={this.state.poster}/>
-                            <p>{movie.original_title}</p>
+                            
+                            <div class='film-vote'><span class='imdb'>IMDb</span><br/>{movie.vote}</div>
+                           
+                            <img class='film-image' alt='movie-poster' src={movie.poster}/>
+                            
+                            <div class='film-title'>{movie.title}</div>
+                           
                         </div>
                         ))}
                     

@@ -1,0 +1,29 @@
+#spotlight {
+  margin: 5% auto 5% auto;
+  width: 80%;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#spotlight-poster {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#spotlight-title {
+  background: rgba(218, 218, 218, 0.3);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  margin-left: 5%;
+  margin-right: auto;
+  width: 80%;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: center;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  position: relative;
+  bottom: 360px;
+}
+/*# sourceMappingURL=Spotlight.css.map */

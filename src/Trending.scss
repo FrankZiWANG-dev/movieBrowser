@@ -1,13 +1,55 @@
+#carrousel {
+    margin: 0px;
+    padding: 0px;
+}
 .film-box {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0% auto 8% auto;
     max-width: 200px;
     max-height: 300px;
     border-radius: 40px;
+}
+
+.film-vote{
+    background: rgba(218,218,218,.3);
+    backdrop-filter: blur(2px);
+
+    margin-left: auto;
+    margin-right: 5%;
+    width: 30%;
+    border-radius: 10px;
+
+    text-align:center;
+    vertical-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+    position: relative;
+    top: 60px;
 }
 .film-image {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    border-radius: 40px;
+    border-radius: 20px;
+}
+.film-title{
+    background: rgba(218,218,218,.3);
+    backdrop-filter: blur(2px);
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-radius: 10px;
+
+    text-align:center;
+    vertical-align: center;
+    padding-top: 7%;
+    padding-bottom: 7%;
+  
+    position: relative;
+    bottom: 75px;
+}
+.imdb{
+    text-align:left;
+    font-size:x-small;
 }
