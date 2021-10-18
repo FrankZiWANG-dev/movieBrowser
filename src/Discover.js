@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import Nav from './Nav.js';
 import Footer from './Footer.js';
 import Categories from './Categories.js'

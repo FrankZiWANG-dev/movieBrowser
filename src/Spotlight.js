@@ -43,7 +43,7 @@ export default class Spotlight extends React.Component{
             <div id="spotlight">
                 <img id="spotlight-poster" alt="spotlight-poster" src={this.state.spotlightPoster}/>
                 <div id="spotlight-title">
-                    <img id="spotlight-title-play" src="https://github.com/FrankZiWANG-dev/movieBrowser/blob/main/src/images/Icon.png?raw=true" alt="play-button"/>
+                    <img id="spotlight-title-play" src="https://github.com/FrankZiWANG-dev/movieBrowser/blob/main/src/images/play-button.png?raw=true" alt="play-button"/>
                     <div id="spotlight-title-column2">
                         <p id="spotlight-title-tagline">Movie Spotlight </p>
                         <p id="spotlight-title-content">{this.state.spotlightTitle}</p>

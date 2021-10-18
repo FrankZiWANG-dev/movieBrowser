@@ -68,7 +68,7 @@ export default class Trending extends React.Component{
                             
                             <div class='film-vote'>
                                 <span class='imdb'>IMDb</span><br/>
-                                <img class='star' alt='star' src='https://github.com/FrankZiWANG-dev/movieBrowser/blob/main/src/images/Group%20262.png?raw=true' />
+                                <img class='star' alt='star' src='https://github.com/FrankZiWANG-dev/movieBrowser/blob/main/src/images/star.png?raw=true' />
                                 {movie.vote}
                             </div>
                            
