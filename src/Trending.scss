@@ -1,64 +1,71 @@
 #carrousel {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-    overflow: auto;
-    white-space: nowrap;
+    margin-left: 0%;
+    margin-right: 0%;
 }
+
+h2{
+    margin-bottom: 0;
+    position: absolute;
+    z-index: 2;
+    top: 270px;
+}
+
 .film-box {
-    margin: 0% 5% 8% 5%;
-    max-width: 200px;
-    max-height: 300px;
+    margin: 0% 2% 0% 2%;
     border-radius: 40px;
 }
-.star{
-    width: 20%;
-    height: 20%;
-    margin-right: 8%;
-}
+
 .film-vote{
     background: rgba(218,218,218,.3);
     backdrop-filter: blur(2px);
 
     margin-left: auto;
-    margin-right: 5%;
-    width: 30%;
+    margin-right: 10%;
+    width: 20%;
     border-radius: 10px;
 
+    text-shadow: 1px 1px black ;
     text-align:left;
     vertical-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 3%;
+    padding: 2% 0% 2% 3%;
 
     position: relative;
     top: 60px;
+    right: 30px;
 }
+    .star{
+        float: left;
+        width: 20%;
+        height: 20%;
+        margin: 7% 4% 0% 0%;
+    }
+    .imdb{
+        text-align:left;
+        font-size:x-small;
+    }
+
 .film-image {
-    max-width: 100%;
+    max-width: 85%;
     max-height: 100%;
     object-fit: contain;
     border-radius: 20px;
 }
+
 .film-title{
     background: rgba(218,218,218,.3);
     backdrop-filter: blur(2px);
 
     margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+    margin-right: 14%;
+    width: 75%;
     border-radius: 10px;
 
+    text-shadow: 1px 1px black ;
     text-align:center;
     vertical-align: center;
-    padding-top: 7%;
-    padding-bottom: 7%;
-  
+    padding-top: 5%;
+    padding-bottom: 5%;
     position: relative;
     bottom: 75px;
-}
-.imdb{
-    text-align:left;
-    font-size:x-small;
+    right: 15px;
 }

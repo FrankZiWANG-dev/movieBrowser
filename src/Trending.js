@@ -1,8 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import './Trending.css';
 
 export default class Trending extends React.Component{
-//fix carousel size images and remove movie from spotlight in it
+    
     state = {
         loading: true,
         person: null,
@@ -12,6 +18,10 @@ export default class Trending extends React.Component{
         const url = 'https://api.themoviedb.org/3/trending/movie/day?api_key=26f07839b664a690dcfc2af24210b786';
         const response = await fetch(url);
         const data = await response.json();
+
+if (sessionStorage.getItem('spotlight'))
+{const spotlightID = sessionStorage.getItem('spotlight');
+console.log(spotlightID);}
 
         const titles = []; 
         for (let x=0; x<10; x++) {
@@ -27,9 +37,14 @@ export default class Trending extends React.Component{
         for (let x=0; x<10; x++) {
             votes.push(data.results[x].vote_average);
         }
+        
+        const ids = []; 
+        for (let x=0; x<10; x++) {
+            ids.push(data.results[x].id);
+        }
 
         const movies = titles.map(function(x, i){
-            return {title: x, poster: posters[i], vote: votes[i]};
+            return {title: x, poster: posters[i], vote: votes[i], id: ids[i]};
         })
         
         this.setState({
@@ -39,6 +54,16 @@ export default class Trending extends React.Component{
     }
 
     render() {
+        var settings = {
+            centerMode: true,
+            centerPadding: '70px',
+            arrows: false,
+            slidesToShow: 1,
+            swipeToSlide: true,
+            infinite: true,
+            lazyLoad: 'ondemand',
+        };
+
         if (this.state.loading){
             return (
                 <div id="trending">
@@ -63,24 +88,31 @@ export default class Trending extends React.Component{
             <div id="trending">
                 <h2> Trending </h2>
                 <div id="carrousel">
-                        {this.state.movies.map(movie => (
-                        <div class='film-box'>
+                    <Slider {...settings}>
+                            {this.state.movies.map(movie => (
+                            <Link to='/detail' onClick={function(){sessionStorage.setItem("detailID", movie.id);}}>
+                            <div class='film-box'>
+                                
+                                <div class='film-vote'>
+                                    <span class='imdb'>IMDb</span><br/>
+                                    <img class='star' alt='star' src='https://github.com/FrankZiWANG-dev/movieBrowser/blob/main/src/images/star.png?raw=true' />
+                                    {movie.vote}
+                                </div>
                             
-                            <div class='film-vote'>
-                                <span class='imdb'>IMDb</span><br/>
-                                <img class='star' alt='star' src='https://github.com/FrankZiWANG-dev/movieBrowser/blob/main/src/images/star.png?raw=true' />
-                                {movie.vote}
+                                <img class='film-image' alt='movie-poster' src={movie.poster}/>
+                                
+                                <div class='film-title'>{movie.title}</div>
+                            
                             </div>
-                           
-                            <img class='film-image' alt='movie-poster' src={movie.poster}/>
-                            
-                            <div class='film-title'>{movie.title}</div>
-                           
-                        </div>
-                        ))}
-                    
+                            </Link>
+                            ))}
+                    </Slider>
                 </div>
             </div>
         )
     };        
 };
+
+//fix carousel top and bottom margin due to film vote and film title
+//fix film vote star placement margin right too big
+//remove movie from spotlight in it

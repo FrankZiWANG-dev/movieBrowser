@@ -7,8 +7,10 @@ import {
 import Home from './Home.js';
 import Discover from './Discover.js';
 import Profile from './Profile.js';
+import DetailPage from './DetailPage.js'
 import './App.css';
 import WebFont from 'webfontloader';
+
 
 function App() {
   useEffect(() => {
@@ -31,6 +33,9 @@ function App() {
           </Route>
           <Route path="/profile">
             <Profile />
+          </Route>
+          <Route path="/detail">
+            <DetailPage/>
           </Route>
           <Route path="/">
             <Home />

@@ -1,16 +1,19 @@
 footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
     text-align: center;
     background-color: #15141F;
-    padding-bottom: 3%;
-    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-top: 2%;
     img {
-        width: 30px;
-        height: 30px;
+        width: 26px;
+        height: 26px;
     }
 }
 
 #user-icon {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     color: #FF8F71;
 }
