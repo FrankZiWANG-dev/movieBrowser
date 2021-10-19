@@ -14,7 +14,7 @@ export default class DetailInfo extends React.Component{
         const data = await response.json();
         console.log(data);
         this.setState({
-            information : data.results,
+            information : data,
             loading: false 
         });
     }
@@ -28,7 +28,7 @@ export default class DetailInfo extends React.Component{
                 </div>
             )
         }
-        else if (!this.state.trailerVideo){
+        else if (!this.state.information){
             return (
                 <div id="DetailInfo">
                     Information not found
@@ -38,7 +38,15 @@ export default class DetailInfo extends React.Component{
         else {
             return (
                 <div id="DetailInfo">
-                    TEST
+                    <div>{this.state.information.original_title}</div>
+                    <div>{this.state.information.runtime}</div>
+                    <div>{this.state.information.vote_average}</div>
+                    <div>{this.state.information.release_date}</div>
+                    <div>{this.state.information.genres.map(genre => (
+                        <div>{genre.name}</div>
+                    ))}</div>
+                    <div>{this.state.information.overview}</div>
+                    <div>Related Movies</div>
                 </div>
             );
         }; 

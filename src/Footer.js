@@ -26,7 +26,7 @@ export default function Footer(){
         </footer>
     )}
     
-    if (location.pathname == "/") {
+    if (location.pathname == "/Home") {
         return (
         <footer>
             <Link to="/"><img alt="home-button" src="https://github.com/FrankZiWANG-dev/movieBrowser/blob/main/src/images/home-button-orange.png?raw=true"/></Link>

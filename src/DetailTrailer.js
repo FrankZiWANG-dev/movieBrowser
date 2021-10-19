@@ -24,6 +24,7 @@ export default class DetailTrailer extends React.Component{
     
     render() {
         
+
         if (this.state.loading){
             return (
                 <div id="trailer">

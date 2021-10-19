@@ -28,17 +28,17 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/discover">
+          <Route path="/Home">
+            <Home />
+          </Route>
+          <Route path="/Discover">
             <Discover />
           </Route>
-          <Route path="/profile">
+          <Route path="/Profile">
             <Profile />
           </Route>
-          <Route path="/detail">
-            <DetailPage/>
-          </Route>
           <Route path="/">
-            <Home />
+            <DetailPage/>
           </Route>
         </Switch>
 

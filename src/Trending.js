@@ -90,7 +90,10 @@ console.log(spotlightID);}
                 <div id="carrousel">
                     <Slider {...settings}>
                             {this.state.movies.map(movie => (
-                            <Link to='/detail' onClick={function(){sessionStorage.setItem("detailID", movie.id);}}>
+                            <Link onClick={function(){
+                                sessionStorage.setItem("detailTitle", movie.title);
+                                sessionStorage.setItem("detailID", movie.id);}}
+                                to={movie.title}>
                             <div class='film-box'>
                                 
                                 <div class='film-vote'>
