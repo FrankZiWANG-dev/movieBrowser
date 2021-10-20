@@ -46,7 +46,6 @@ export default class DetailInfo extends React.Component{
                         <div>{genre.name}</div>
                     ))}</div>
                     <div>{this.state.information.overview}</div>
-                    <div>Related Movies</div>
                 </div>
             );
         }; 
