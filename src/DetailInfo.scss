@@ -1,11 +1,20 @@
 #DetailInfo{
     margin: 5%;
 }
+h3{
+    color: white;
+}
+h4{
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 #DetailTitle{
     margin-bottom: 10px;
 }
 #DetailSection1{
     display: flex;
+    color: #BCBCBC;
 }
     #DetailRuntime{
         display: flex;
@@ -27,12 +36,26 @@
    
 #DetailSection2{
     display: flex;
+    color: #BCBCBC;
 }
     #DetailDate {
         width: 50%;
     }
     #DetailGenre {
         width: 50%;
+    }
+    .genres {
+        display: flex;
+        flex-direction: row;
+    }
+    .genre {
+        font-size: small;
+        display:inline-block;
+        border:solid 1px #BCBCBC;
+        border-radius: 30px;
+        margin: 3px;
+        padding: 6px;
+
     }
 
 hr {

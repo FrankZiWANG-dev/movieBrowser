@@ -71,7 +71,7 @@ export default class DetailRelated extends React.Component{
 
             if (this.state.loading){
                 return (
-                    <div id="DetailRelated">
+                    <div id="detailRelated">
                         Loading...
                     </div>
                 )
@@ -79,7 +79,7 @@ export default class DetailRelated extends React.Component{
 
             else {
                 return (
-                    <div id="DetailRelated">
+                    <div id="detailRelated">
                         <h3>Related movies</h3>
                         <div id="relatedCarrousel">
                         <Slider {...settings}>
@@ -111,10 +111,11 @@ export default class DetailRelated extends React.Component{
         }
         else {
             return (
-            <div id='DetailRelated'>
+            <div id='detailRelated'>
                 No related movies.
             </div>
         )}
     };      
 };
 
+//carousel show two rows at end, need to fix

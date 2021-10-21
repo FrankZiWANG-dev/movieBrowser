@@ -46,14 +46,14 @@ export default class DetailInfo extends React.Component{
         if (this.state.loading){
             return (
                 <div id="DetailInfo">
-                    Loading...
+                    <h2>Loading...</h2>
                 </div>
             )
         }
         else if (!this.state.information){
             return (
                 <div id="DetailInfo">
-                    Information not found
+                    <h2>Information not found</h2>
                 </div>
             )
         }
@@ -79,9 +79,11 @@ export default class DetailInfo extends React.Component{
                         </div>
                         <div id='DetailGenre'>
                             <h4>Genre</h4>
-                            {this.state.information.genres.map(genre => (
-                            <div>{genre.name}</div>
-                            ))}
+                            <div id='genres'>
+                                {this.state.information.genres.map(genre => (
+                                <div class="genre">{genre.name}</div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                     <hr/>

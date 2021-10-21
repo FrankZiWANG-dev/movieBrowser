@@ -1,27 +1,56 @@
 import React, {useState} from "react";
 import "./DetailStory.css";
 
-export default function DetailStory(){
-    // const [readMore,setReadMore]=useState(false);
-    
-    // const DetailID = sessionStorage.getItem('detailID');
-    // const url = 'https://api.themoviedb.org/3/movie/'+ DetailID +'?api_key=26f07839b664a690dcfc2af24210b786&language=en-US';
-    // const extraContent = url;
-    // fetch(url)
-    //     .then(response => response.json())
-    //     .then(data => extraContent = data.overview);
-        
-    
-    // // const extraContent= data.overview.substring(201);
- 
-    // const read=readMore?'Read Less << ':'Read More >> '
+export default class DetailStory extends React.Component{
+    state = {
+        loading: true,
+    }
 
-    // return (
-    //   <div className="App">
-    //     <a className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{read}</h2></a>
-    //     {/* {readMore && extraContent} */}
-    //   </div>
-    // );
+    async componentDidMount(){
+        const DetailID = sessionStorage.getItem('detailID');
+        const url = 'https://api.themoviedb.org/3/movie/'+ DetailID +'?api_key=26f07839b664a690dcfc2af24210b786&language=en-US';
+        const response = await fetch(url);
+        const data = await response.json();
+
+        this.setState({
+            detailStory : data.overview,
+            loading: false 
+        });
+
+    }
+    
+    render() {
         
-        return ('nope');
+        if (this.state.loading){
+            return (
+                <div id="story">
+                    <h3>Synopsis</h3>
+                    Loading...
+                    <hr/>
+                </div>
+                
+            )
+        }
+        else if (!this.state.detailStory){
+            return (
+                <div id="story">
+                    <h3>Synopsis</h3>
+                    No synopsis available
+                    <hr/>
+                </div>
+            )
+        }
+        else {
+            return (
+                <div id="story">
+                    <h3>Synopsis</h3>
+                    {this.state.detailStory}
+                    <hr/>
+                </div>
+            );
+        } 
+    };
+
 };
+
+//no readmore button yet

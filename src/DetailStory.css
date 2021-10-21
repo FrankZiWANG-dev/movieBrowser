@@ -1,1 +1,13 @@
-/* No CSS *//*# sourceMappingURL=DetailStory.css.map */
+#story {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  color: #BCBCBC;
+}
+
+h3 {
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/*# sourceMappingURL=DetailStory.css.map */

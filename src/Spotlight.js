@@ -22,6 +22,10 @@ export default class Spotlight extends React.Component{
         const data2 = await response2.json();
         const spotlightVideo =  'https://www.youtube.com/watch?v=' + data2.results[0].key;
 
+        sessionStorage.setItem('detailID', spotlightID);
+        sessionStorage.setItem('detailTitle', spotlightTitle);
+        sessionStorage.setItem('spotlightTitle', spotlightTitle);
+
         this.setState({
             spotlight: spotlight,
             spotlightTitle : spotlightTitle,
@@ -30,8 +34,7 @@ export default class Spotlight extends React.Component{
             loading: false 
         });
         
-        sessionStorage.setItem('spotlight', spotlightID);
-
+        
     }
     
     render() {
@@ -51,8 +54,9 @@ export default class Spotlight extends React.Component{
             )
         }
         else {
+           
             return (
-            <Link to='/Discover'>
+            <Link to={this.state.spotlightTitle}>
             <div id="spotlight">
                 <img id="spotlight-poster" alt="spotlight-poster" src={this.state.spotlightPoster}/>
                 <div id="spotlight-title">

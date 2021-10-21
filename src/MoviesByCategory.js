@@ -8,11 +8,14 @@ export default class MoviesByCategory extends React.Component{
     }
 
     async componentDidMount(){
-        const url = 'https://api.themoviedb.org/3/genre/movie/list?api_key=26f07839b664a690dcfc2af24210b786&language=en-US';
+        const url = 'https://api.themoviedb.org/3/movie/?api_key=26f07839b664a690dcfc2af24210b786&language=en-US';
         const response = await fetch(url);
         const data = await response.json();
         
-        this.setState({genres: data.genres, loading: false});
+        this.setState({
+            moviesByCategory: data.results,
+            loading: false});
+        console.log(data);
     }
 
     render() {

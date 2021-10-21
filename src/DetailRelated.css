@@ -1,11 +1,15 @@
-.detailRelated {
-  max-height: 150px;
-  max-width: 200px;
+#detailRelated {
+  margin-left: 5%;
+  margin-right: 5%;
+  color: white;
 }
 
-.detailRelated {
-  max-height: 150px;
-  max-width: 200px;
+#detailRelated .slick-slide {
+  margin: 0 15px;
+}
+
+#detailRelated .slick-list {
+  margin: 0 -15px;
 }
 
 .related-film-image-box {
@@ -18,13 +22,5 @@
 .related-film-image {
   max-height: 400px;
   max-width: 400px;
-}
-
-.slick-slide {
-  margin: 0 15px;
-}
-
-.slick-list {
-  margin: 0 -15px;
 }
 /*# sourceMappingURL=DetailRelated.css.map */
