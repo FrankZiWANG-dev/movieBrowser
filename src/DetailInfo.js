@@ -4,7 +4,6 @@ import "./DetailInfo.css";
 export default class DetailInfo extends React.Component{
     state = {
         loading: true,
-        person: null,
     };
 
     async componentDidMount(){
@@ -13,8 +12,31 @@ export default class DetailInfo extends React.Component{
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
+
+        const date = new Date (data.release_date);
+            const dateMonthIndex = date.getMonth();
+            const months = {
+                0: 'January',
+                1: 'February',
+                2: 'March',
+                3: 'April',
+                4: 'May',
+                5: 'June',
+                6: 'July',
+                7: 'August',
+                8: 'September',
+                9: 'October',
+                10: 'November',
+                11: 'December'
+              }
+            const dateMonth = months[dateMonthIndex];
+            const dateDay = date.getDate();
+            const dateYear = date.getFullYear();
+        const formattedDate = dateMonth + ' ' + dateDay + ', ' + dateYear;
+
         this.setState({
             information : data,
+            date: formattedDate,
             loading: false 
         });
     }
@@ -38,14 +60,31 @@ export default class DetailInfo extends React.Component{
         else {
             return (
                 <div id="DetailInfo">
-                    <div>{this.state.information.original_title}</div>
-                    <div>{this.state.information.runtime}</div>
-                    <div>{this.state.information.vote_average}</div>
-                    <div>{this.state.information.release_date}</div>
-                    <div>{this.state.information.genres.map(genre => (
-                        <div>{genre.name}</div>
-                    ))}</div>
-                    <div>{this.state.information.overview}</div>
+                    <h3 id='DetailTitle'>{this.state.information.original_title}</h3>
+                    <div id="DetailSection1">
+                        <div id='DetailRuntime'>
+                            <img id='clock' alt='clock' src='https://github.com/FrankZiWANG-dev/movieBrowser/blob/main/src/images/clock.png?raw=true' />
+                                {this.state.information.runtime} minutes
+                        </div>
+                        <div id='DetailVote'>
+                        <img id='grey-star' alt='grey-star' src='https://github.com/FrankZiWANG-dev/movieBrowser/blob/main/src/images/star-grey.png?raw=true' />
+                            {this.state.information.vote_average} (IMDb)
+                        </div>
+                    </div>
+                    <hr/>
+                    <div id='DetailSection2'>
+                        <div id='DetailDate'>
+                            <h4>Release date</h4>
+                            {this.state.date}
+                        </div>
+                        <div id='DetailGenre'>
+                            <h4>Genre</h4>
+                            {this.state.information.genres.map(genre => (
+                            <div>{genre.name}</div>
+                            ))}
+                        </div>
+                    </div>
+                    <hr/>
                 </div>
             );
         }; 

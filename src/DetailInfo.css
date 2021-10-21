@@ -1,1 +1,61 @@
-/* No CSS *//*# sourceMappingURL=DetailInfo.css.map */
+#DetailInfo {
+  margin: 5%;
+}
+
+#DetailTitle {
+  margin-bottom: 10px;
+}
+
+#DetailSection1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#DetailRuntime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5%;
+}
+
+#clock {
+  margin-right: 10px;
+}
+
+#DetailVote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#grey-star {
+  margin-right: 3%;
+}
+
+#DetailSection2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#DetailDate {
+  width: 50%;
+}
+
+#DetailGenre {
+  width: 50%;
+}
+
+hr {
+  border: 1px solid #515151;
+}
+/*# sourceMappingURL=DetailInfo.css.map */

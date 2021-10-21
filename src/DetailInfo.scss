@@ -1,0 +1,40 @@
+#DetailInfo{
+    margin: 5%;
+}
+#DetailTitle{
+    margin-bottom: 10px;
+}
+#DetailSection1{
+    display: flex;
+}
+    #DetailRuntime{
+        display: flex;
+        width: 30%;
+        align-items: center;
+        margin-right: 5%;
+    }
+        #clock {
+            margin-right: 10px;
+        }
+    #DetailVote{
+        display: flex;
+        width: 30%;
+        align-items: center;
+    }
+        #grey-star {
+            margin-right: 3%;
+        }
+   
+#DetailSection2{
+    display: flex;
+}
+    #DetailDate {
+        width: 50%;
+    }
+    #DetailGenre {
+        width: 50%;
+    }
+
+hr {
+    border:1px solid #515151;
+}

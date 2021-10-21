@@ -1,1 +1,30 @@
-/* No CSS *//*# sourceMappingURL=DetailRelated.css.map */
+.detailRelated {
+  max-height: 150px;
+  max-width: 200px;
+}
+
+.detailRelated {
+  max-height: 150px;
+  max-width: 200px;
+}
+
+.related-film-image-box {
+  width: 200px;
+  height: 140px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.related-film-image {
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.slick-slide {
+  margin: 0 15px;
+}
+
+.slick-list {
+  margin: 0 -15px;
+}
+/*# sourceMappingURL=DetailRelated.css.map */

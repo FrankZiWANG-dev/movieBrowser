@@ -5,7 +5,6 @@ export default class MoviesByCategory extends React.Component{
 
     state = {
         loading: true,
-        person: null,
     }
 
     async componentDidMount(){

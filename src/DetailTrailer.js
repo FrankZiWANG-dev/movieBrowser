@@ -5,7 +5,6 @@ import "./DetailTrailer.css";
 export default class DetailTrailer extends React.Component{
     state = {
         loading: true,
-        person: null,
     }
 
     async componentDidMount(){

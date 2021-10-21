@@ -11,7 +11,6 @@ export default class Trending extends React.Component{
     
     state = {
         loading: true,
-        person: null,
     }
 
     async componentDidMount(){

@@ -5,7 +5,6 @@ import './Spotlight.css';
 export default class Spotlight extends React.Component{
     state = {
         loading: true,
-        person: null,
     }
 
     async componentDidMount(){
