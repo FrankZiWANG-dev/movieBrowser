@@ -21,4 +21,8 @@ input:focus {
   position: absolute;
   margin: 2%;
 }
+
+body {
+  background-color: #15141F;
+}
 /*# sourceMappingURL=Discover.css.map */

@@ -8,7 +8,7 @@ export default function Profile() {
         <>
         <Nav/>
 
-        <p>Profile</p>
+        <p>Profile page to come</p>
         
         <Footer/>
         </>

@@ -22,7 +22,18 @@
   margin-right: 5%;
 }
 
-.img-carousel-2 {
-  max-width: 300px;
+.allMovie {
+  margin-left: 10%;
+}
+
+.allMovie .img-carousel-2 {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.allMovie .slick-slide {
+  max-width: 150px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 /*# sourceMappingURL=MoviesByCategory.css.map */

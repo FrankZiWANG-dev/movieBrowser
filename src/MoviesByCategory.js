@@ -51,12 +51,10 @@ export default function MoviesByCategory() {
 
     if(movies.length !== 0) { 
         var settings = {
-            centerMode: true,
-            centerPadding: '70px',
+            // centerMode: true,
+            // centerPadding: '70px',
             arrows: false,
-            slidesToShow: 1,
             infinite: true,
-            lazyLoad: 'ondemand',
             vertical: true,
             verticalSwiping: true,
             rows: 2
